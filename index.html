@@ -6,104 +6,260 @@
   <title>ByDzyne: Income Disclosure</title>
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       line-height: 1.6;
-      color: #333;
+      color: #000000;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background-color: #fff;
+      margin: 0 auto;
     }
     h1 {
       text-align: center;
-      font-size: 2.4em;
-      margin-bottom: 10px;
+      font-size: 2.8em;
+      font-weight: bold;
+      margin: 20px 0 10px;
     }
-    h2 {
+    .country-list {
       text-align: center;
-      font-size: 1.8em;
-      margin: 10px 0;
+      margin: 20px 0 40px;
+      font-size: 1.1em;
+    }
+    .country-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+    }
+    .country-list li {
+      display: inline;
+      margin: 0 8px;
+    }
+    .country-list a {
+      color: #000;
+      text-decoration: none;
+    }
+    .country-list a:hover {
+      text-decoration: underline;
     }
     .small-header {
       text-align: center;
-      font-size: 1.1em;
+      font-size: 1.4em;
       font-weight: normal;
-      color: #555;
-      margin-bottom: 40px;
+      margin: 40px 0 20px;
+      line-height: 1.4;
+    }
+    .small-header strong {
+      font-weight: bold;
+    }
+    p {
+      font-size: 1.1em;
+      margin: 20px 0;
     }
     .disclaimer {
       font-style: italic;
-      margin: 25px 0;
-      padding: 0 15px;
-      border-left: 4px solid #ccc;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 40px 0;
+      margin: 30px 0;
+      padding: 0 20px;
     }
     .stats {
       font-weight: bold;
-      margin: 25px 0;
+      text-transform: uppercase;
+      margin: 40px 0;
+      font-size: 1.15em;
     }
     .definition {
-      margin: 20px 0;
+      margin: 30px 0;
+      font-size: 1.1em;
     }
-    strong, b {
-      color: #000;
+    .definition strong {
+      font-weight: bold;
+    }
+    hr.divider {
+      border: none;
+      border-top: 1px dashed #000;
+      margin: 60px 0 20px;
+      width: 100%;
     }
   </style>
 </head>
 <body>
 
-  <h1>ByDzyne: Income Disclosure</h1>
-  
-  <h2>Travel</h2>
-  <h2>Total Wellness</h2>
-  <h2>Training & Education</h2>
+  <div class="container">
 
-  <div class="small-header">
-    ###### ByDzyne®<br>
-    Income Disclosure Statement
+    <h1>ByDzyne: Income Disclosure</h1>
+
+    <div class="country-list">
+      <ul>
+        <li><a href="#">Algeria</a></li>
+        <li><a href="#">Andorra</a></li>
+        <li><a href="#">Argentina</a></li>
+        <li><a href="#">Aruba</a></li>
+        <li><a href="#">Australia</a></li>
+        <li><a href="#">Austria</a></li>
+        <li><a href="#">Bahrain</a></li>
+        <li><a href="#">Bangladesh</a></li>
+        <li><a href="#">Belgium</a></li>
+        <li><a href="#">Belize</a></li>
+        <li><a href="#">Benin</a></li>
+        <li><a href="#">Bolivia</a></li>
+        <li><a href="#">Botswana</a></li>
+        <li><a href="#">Brazil</a></li>
+        <li><a href="#">Brunei</a></li>
+        <li><a href="#">Bulgaria</a></li>
+        <li><a href="#">Burundi</a></li>
+        <li><a href="#">Cambodia</a></li>
+        <li><a href="#">Cameroon</a></li>
+        <li><a href="#">Canada</a></li>
+        <li><a href="#">Chile</a></li>
+        <li><a href="#">Colombia</a></li>
+        <li><a href="#">Costa Rica</a></li>
+        <li><a href="#">Croatia</a></li>
+        <li><a href="#">Curacao</a></li>
+        <li><a href="#">Czech Republic</a></li>
+        <li><a href="#">Denmark</a></li>
+        <li><a href="#">Dominican Republic</a></li>
+        <li><a href="#">Ecuador</a></li>
+        <li><a href="#">Egypt</a></li>
+        <li><a href="#">El Salvador</a></li>
+        <li><a href="#">Equatorial Guinea</a></li>
+        <li><a href="#">Finland</a></li>
+        <li><a href="#">France</a></li>
+        <li><a href="#">French Guiana</a></li>
+        <li><a href="#">French Polynesia</a></li>
+        <li><a href="#">Gabon</a></li>
+        <li><a href="#">Germany</a></li>
+        <li><a href="#">Ghana</a></li>
+        <li><a href="#">Greece</a></li>
+        <li><a href="#">Guadeloupe</a></li>
+        <li><a href="#">Guatemala</a></li>
+        <li><a href="#">Guyana</a></li>
+        <li><a href="#">Haiti</a></li>
+        <li><a href="#">Honduras</a></li>
+        <li><a href="#">Hong Kong</a></li>
+        <li><a href="#">Hungary</a></li>
+        <li><a href="#">Iceland</a></li>
+        <li><a href="#">India</a></li>
+        <li><a href="#">Indonesia</a></li>
+        <li><a href="#">Ireland</a></li>
+        <li><a href="#">Israel</a></li>
+        <li><a href="#">Italy</a></li>
+        <li><a href="#">Ivory Coast</a></li>
+        <li><a href="#">Jamaica</a></li>
+        <li><a href="#">Japan</a></li>
+        <li><a href="#">Kazakhstan</a></li>
+        <li><a href="#">Kenya</a></li>
+        <li><a href="#">Kuwait</a></li>
+        <li><a href="#">Laos</a></li>
+        <li><a href="#">Lebanon</a></li>
+        <li><a href="#">Malawi</a></li>
+        <li><a href="#">Malaysia</a></li>
+        <li><a href="#">Mali</a></li>
+        <li><a href="#">Malta</a></li>
+        <li><a href="#">Martinique</a></li>
+        <li><a href="#">Mauritius</a></li>
+        <li><a href="#">Mexico</a></li>
+        <li><a href="#">Morocco</a></li>
+        <li><a href="#">Mozambique</a></li>
+        <li><a href="#">Myanmar</a></li>
+        <li><a href="#">Nepal</a></li>
+        <li><a href="#">Netherlands</a></li>
+        <li><a href="#">New Zealand</a></li>
+        <li><a href="#">Nicaragua</a></li>
+        <li><a href="#">Nigeria</a></li>
+        <li><a href="#">Norway</a></li>
+        <li><a href="#">Oman</a></li>
+        <li><a href="#">Pakistan</a></li>
+        <li><a href="#">Panama</a></li>
+        <li><a href="#">Paraguay</a></li>
+        <li><a href="#">Peru</a></li>
+        <li><a href="#">Philippines</a></li>
+        <li><a href="#">Poland</a></li>
+        <li><a href="#">Portugal</a></li>
+        <li><a href="#">Puerto Rico</a></li>
+        <li><a href="#">Qatar</a></li>
+        <li><a href="#">Romania</a></li>
+        <li><a href="#">Saint Barthelemy</a></li>
+        <li><a href="#">Saint Martin</a></li>
+        <li><a href="#">Saudi Arabia</a></li>
+        <li><a href="#">Senegal</a></li>
+        <li><a href="#">Serbia</a></li>
+        <li><a href="#">Sierra Leone</a></li>
+        <li><a href="#">Singapore</a></li>
+        <li><a href="#">Slovenia</a></li>
+        <li><a href="#">South Africa</a></li>
+        <li><a href="#">Spain</a></li>
+        <li><a href="#">Suriname</a></li>
+        <li><a href="#">Sweden</a></li>
+        <li><a href="#">Switzerland</a></li>
+        <li><a href="#">Taiwan</a></li>
+        <li><a href="#">Tanzania</a></li>
+        <li><a href="#">Thailand</a></li>
+        <li><a href="#">Togo</a></li>
+        <li><a href="#">Trinidad and Tobago</a></li>
+        <li><a href="#">Tunisia</a></li>
+        <li><a href="#">Turkey</a></li>
+        <li><a href="#">UAE (Dubai)</a></li>
+        <li><a href="#">Uganda</a></li>
+        <li><a href="#">Ukraine</a></li>
+        <li><a href="#">United Kingdom</a></li>
+        <li><a href="#">United States</a></li>
+        <li><a href="#">Uruguay</a></li>
+        <li><a href="#">Venezuela</a></li>
+        <li><a href="#">Zambia</a></li>
+        <li><a href="#">Digital Moon (C)</a></li>
+        <li><a href="#">Digital Nation (K)</a></li>
+        <li><a href="#">Digital Star (V)</a></li>
+        <li><a href="#">Druk</a></li>
+        <li><a href="#">Ecommerce 1</a></li>
+        <li><a href="#">Online Sales</a></li>
+      </ul>
+    </div>
+
+    <div class="small-header">
+      ###### ByDzyne®<br>
+      Income Disclosure Statement
+    </div>
+
+    <p>The Financial Rewards Program is an exciting opportunity designed to reward you for your hard work. As we are all unique and different, everyone’s results will vary. Any and all claims or representations, as to income earnings from ByDzyne or within the program are not to be considered average earnings, neither can they be used as an indication of your future success or results. Past performance is not a guarantee of future results. Income disclosures are neither a guarantee of performance nor an indication of anticipated return. Income results are based on many factors, within and outside of your control, including economic factors, business and sales skills, quality of time, dedication, work ethic, and leadership. Some will perform well above average earning a substantial income, while others will perform below average, and some may not earn any income at all. ByDzyne does not guarantee or imply any specific income earnings, results, or success. If you rely upon our examples and information; you must accept the risk of not doing as well as the examples provided.</p>
+
+    <div class="disclaimer">
+      <em>*The Income Disclosure Chart represents the high, low, and average earnings per Pay Cycle from January 1, 2022 to December 31, 2024 earned by Active ByDzyne Brand Ambassadors* at each Paid As Rank.*</em>
+    </div>
+
+    <div class="disclaimer">
+      <em>*The income statistics shown include commissions and bonuses earned by ByDzyne’s BAs pursuant to the ByDzyne Financial Rewards Program. The Business Volume (BV) generated within a Pay Cycle is used to calculate your commissions, bonuses and rank. The higher the rank, the more bonuses and commissions you may earn.*</em>
+    </div>
+
+    <div class="disclaimer">
+      <em>*The figures on this chart should not be considered guarantees of your actual earnings or profits solely by participating in the ByDzyne Financial Rewards Program.*</em>
+    </div>
+
+    <div class="stats">
+      BETWEEN 01/01/2022 to 12/31/2024: THE NUMBER OF ACTIVE* BYDZYNE BRAND AMBASSADORS (BAs) WHO HAVE NOT RECEIVED ANY COMMISSIONS, BONUSES OR OVERRIDES IS 13,906 OR 78.73% OF SUCH BAs.
+    </div>
+
+    <div class="stats">
+      THE MEDIAN AMOUNT OF COMMISSIONS, BONUSES AND OVERRIDES RECEIVED BY ALL ACTIVE BAs IN BYDZYNE IS $0.00. 78.7% OF ALL ACTIVE BAs HAVE RECEIVED, IN THE AGGREGATE, LESS THAN OR EQUAL TO THIS AMOUNT. 21.3% OF ALL ACTIVE BAs HAVE RECEIVED, IN THE AGGREGATE, MORE THAN THIS AMOUNT.
+    </div>
+
+    <div class="stats">
+      THE AVERAGE AMOUNT OF COMMISSIONS, BONUSES AND OVERRIDES THAT HAVE BEEN RECEIVED BY ALL ACTIVE BYDZYNE BAs IS $1,756.21.
+    </div>
+
+    <div class="definition">
+      <strong>USA:</strong> An active BA is a BA who sells a minimum of 60 BV worth of products to their personally enrolled Retail or Preferred Customer(s) every month. (For Distributor or Director Zone, 60 BV is the minimum to maintain the paid as ranks and applicable commissions. For Diamond, President or Crown Zone, 120 BV is the minimum to maintain the paid as ranks and applicable commissions.)
+    </div>
+
+    <div class="definition">
+      <strong>Global:</strong> An active BA is a BA who buys a minimum of 60 BV worth of products every month. (For Distributor or Director Zone, 60 BV is the minimum to maintain the paid as ranks and applicable commissions. For Diamond, President or Crown Zone, 120 BV is the minimum to maintain the paid as ranks and applicable commissions.)
+    </div>
+
+    <hr class="divider">
+
   </div>
-
-  <p>The Financial Rewards Program is an exciting opportunity designed to reward you for your hard work. As we are all unique and different, everyone’s results will vary. Any and all claims or representations, as to income earnings from ByDzyne or within the program are not to be considered average earnings, neither can they be used as an indication of your future success or results. Past performance is not a guarantee of future results. Income disclosures are neither a guarantee of performance nor an indication of anticipated return. Income results are based on many factors, within and outside of your control, including economic factors, business and sales skills, quality of time, dedication, work ethic, and leadership. Some will perform well above average earning a substantial income, while others will perform below average, and some may not earn any income at all. ByDzyne does not guarantee or imply any specific income earnings, results, or success. If you rely upon our examples and information; you must accept the risk of not doing as well as the examples provided.</p>
-
-  <div class="disclaimer">
-    <em>*The Income Disclosure Chart represents the high, low, and average earnings per Pay Cycle from January 1, 2022 to December 31, 2024 earned by Active ByDzyne Brand Ambassadors* at each Paid As Rank.*</em>
-  </div>
-
-  <div class="disclaimer">
-    <em>*The income statistics shown include commissions and bonuses earned by ByDzyne’s BAs pursuant to the ByDzyne Financial Rewards Program. The Business Volume (BV) generated within a Pay Cycle is used to calculate your commissions, bonuses and rank. The higher the rank, the more bonuses and commissions you may earn.*</em>
-  </div>
-
-  <div class="disclaimer">
-    <em>*The figures on this chart should not be considered guarantees of your actual earnings or profits solely by participating in the ByDzyne Financial Rewards Program.*</em>
-  </div>
-
-  <div class="stats">
-    BETWEEN 01/01/2022 to 12/31/2024: THE NUMBER OF ACTIVE* BYDZYNE BRAND AMBASSADORS (BAs) WHO HAVE NOT RECEIVED ANY COMMISSIONS, BONUSES OR OVERRIDES IS 13,906 OR 78.73% OF SUCH BAs.
-  </div>
-
-  <div class="stats">
-    THE MEDIAN AMOUNT OF COMMISSIONS, BONUSES AND OVERRIDES RECEIVED BY ALL ACTIVE BAs IN BYDZYNE IS $0.00. 78.7% OF ALL ACTIVE BAs HAVE RECEIVED, IN THE AGGREGATE, LESS THAN OR EQUAL TO THIS AMOUNT. 21.3% OF ALL ACTIVE BAs HAVE RECEIVED, IN THE AGGREGATE, MORE THAN THIS AMOUNT.
-  </div>
-
-  <div class="stats">
-    THE AVERAGE AMOUNT OF COMMISSIONS, BONUSES AND OVERRIDES THAT HAVE BEEN RECEIVED BY ALL ACTIVE BYDZYNE BAs IS $1,756.21.
-  </div>
-
-  <hr>
-
-  <div class="definition">
-    <strong>USA:</strong> An active BA is a BA who sells a minimum of 60 BV worth of products to their personally enrolled Retail or Preferred Customer(s) every month. (For Distributor or Director Zone, 60 BV is the minimum to maintain the paid as ranks and applicable commissions. For Diamond, President or Crown Zone, 120 BV is the minimum to maintain the paid as ranks and applicable commissions.)
-  </div>
-
-  <div class="definition">
-    <strong>Global:</strong> An active BA is a BA who buys a minimum of 60 BV worth of products every month. (For Distributor or Director Zone, 60 BV is the minimum to maintain the paid as ranks and applicable commissions. For Diamond, President or Crown Zone, 120 BV is the minimum to maintain the paid as ranks and applicable commissions.)
-  </div>
-
-  <hr>
 
 </body>
   </html>
