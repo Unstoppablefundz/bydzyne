@@ -5,236 +5,201 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ByDzyne: Income Disclosure</title>
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      color: #000000;
-      background-color: #ffffff;
+    * {
       margin: 0;
-      padding: 40px 20px;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+      background: radial-gradient(circle at top center, #1a1a1a, #0f0f0f 70%);
+      color: #e0e0e0;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .top-bar {
+      background: #000;
+      color: #d4af37;
+      padding: 10px 20px;
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #d4af37;
+      box-shadow: 0 2px 10px rgba(212, 175, 55, 0.15);
+    }
+    .top-bar .lang-country {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .flag { font-size: 20px; }
+    .top-bar button, .top-bar .join {
+      background: transparent;
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .top-bar .join {
+      background: #d4af37;
+      color: #000;
+      font-weight: bold;
+    }
+    .top-bar button:hover, .top-bar .join:hover {
+      background: #ffd700;
+      color: #000;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+    .header-bar {
+      background: linear-gradient(135deg, #111, #1c1c1c);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #d4af37;
+    }
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #ffd700;
+      letter-spacing: 4px;
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
     }
     .container {
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
     h1 {
       text-align: center;
-      font-size: 2.8em;
-      font-weight: bold;
-      margin: 20px 0 10px;
+      font-size: 3rem;
+      color: #ffd700;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 10px rgba(212, 175, 55, 0.4);
     }
-    .country-list {
+    .countries {
+      background: rgba(20, 20, 20, 0.7);
+      border: 1px solid #d4af37;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 40px 0;
+      font-size: 1.05rem;
+      line-height: 1.9;
       text-align: center;
-      margin: 20px 0 40px;
-      font-size: 1.1em;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
     }
-    .country-list ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: inline-block;
-    }
-    .country-list li {
-      display: inline;
+    .countries span {
+      color: #e0e0e0;
       margin: 0 8px;
     }
-    .country-list a {
-      color: #000;
-      text-decoration: none;
+    .countries strong {
+      color: #ffd700;
     }
-    .country-list a:hover {
-      text-decoration: underline;
+    .content-card {
+      background: rgba(30, 30, 30, 0.85);
+      border: 1px solid #d4af37;
+      border-radius: 12px;
+      padding: 30px;
+      margin: 30px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
     }
     .small-header {
       text-align: center;
-      font-size: 1.4em;
-      font-weight: normal;
-      margin: 40px 0 20px;
-      line-height: 1.4;
-    }
-    .small-header strong {
-      font-weight: bold;
+      font-size: 1.8rem;
+      color: #ffd700;
+      margin-bottom: 25px;
+      font-weight: 600;
     }
     p {
-      font-size: 1.1em;
+      font-size: 1.1rem;
       margin: 20px 0;
     }
     .disclaimer {
       font-style: italic;
+      color: #c0c0c0;
       margin: 30px 0;
-      padding: 0 20px;
+      padding: 15px;
+      border-left: 4px solid #d4af37;
+      background: rgba(50, 50, 50, 0.4);
+      border-radius: 6px;
     }
     .stats {
       font-weight: bold;
       text-transform: uppercase;
+      color: #ffd700;
+      font-size: 1.25rem;
       margin: 40px 0;
-      font-size: 1.15em;
+      padding: 20px;
+      background: rgba(20, 20, 20, 0.8);
+      border-radius: 10px;
+      border: 1px solid #d4af37/30;
     }
     .definition {
-      margin: 30px 0;
-      font-size: 1.1em;
+      margin: 35px 0;
+      padding: 20px;
+      background: rgba(40, 40, 40, 0.6);
+      border-radius: 10px;
+      border-left: 5px solid #d4af37;
     }
     .definition strong {
-      font-weight: bold;
+      color: #ffd700;
     }
-    hr.divider {
+    hr {
       border: none;
-      border-top: 1px dashed #000;
-      margin: 60px 0 20px;
-      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #d4af37, transparent);
+      margin: 60px 0;
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 2.4rem; }
+      .logo { font-size: 2rem; }
+      .countries { font-size: 0.95rem; padding: 20px; }
     }
   </style>
 </head>
 <body>
 
+  <div class="top-bar">
+    <div class="lang-country">
+      <span>English</span>
+      <span class="flag">🇳🇬</span>
+      <span>Nigeria ▼</span>
+    </div>
+    <div>
+      <span style="margin-right: 20px;">🛒</span>
+      <button class="join">Join</button>
+    </div>
+  </div>
+
+  <div class="header-bar">
+    <div class="logo">BYDZYNE</div>
+  </div>
+
   <div class="container">
 
     <h1>ByDzyne: Income Disclosure</h1>
 
-    <div class="country-list">
-      <ul>
-        <li><a href="#">Algeria</a></li>
-        <li><a href="#">Andorra</a></li>
-        <li><a href="#">Argentina</a></li>
-        <li><a href="#">Aruba</a></li>
-        <li><a href="#">Australia</a></li>
-        <li><a href="#">Austria</a></li>
-        <li><a href="#">Bahrain</a></li>
-        <li><a href="#">Bangladesh</a></li>
-        <li><a href="#">Belgium</a></li>
-        <li><a href="#">Belize</a></li>
-        <li><a href="#">Benin</a></li>
-        <li><a href="#">Bolivia</a></li>
-        <li><a href="#">Botswana</a></li>
-        <li><a href="#">Brazil</a></li>
-        <li><a href="#">Brunei</a></li>
-        <li><a href="#">Bulgaria</a></li>
-        <li><a href="#">Burundi</a></li>
-        <li><a href="#">Cambodia</a></li>
-        <li><a href="#">Cameroon</a></li>
-        <li><a href="#">Canada</a></li>
-        <li><a href="#">Chile</a></li>
-        <li><a href="#">Colombia</a></li>
-        <li><a href="#">Costa Rica</a></li>
-        <li><a href="#">Croatia</a></li>
-        <li><a href="#">Curacao</a></li>
-        <li><a href="#">Czech Republic</a></li>
-        <li><a href="#">Denmark</a></li>
-        <li><a href="#">Dominican Republic</a></li>
-        <li><a href="#">Ecuador</a></li>
-        <li><a href="#">Egypt</a></li>
-        <li><a href="#">El Salvador</a></li>
-        <li><a href="#">Equatorial Guinea</a></li>
-        <li><a href="#">Finland</a></li>
-        <li><a href="#">France</a></li>
-        <li><a href="#">French Guiana</a></li>
-        <li><a href="#">French Polynesia</a></li>
-        <li><a href="#">Gabon</a></li>
-        <li><a href="#">Germany</a></li>
-        <li><a href="#">Ghana</a></li>
-        <li><a href="#">Greece</a></li>
-        <li><a href="#">Guadeloupe</a></li>
-        <li><a href="#">Guatemala</a></li>
-        <li><a href="#">Guyana</a></li>
-        <li><a href="#">Haiti</a></li>
-        <li><a href="#">Honduras</a></li>
-        <li><a href="#">Hong Kong</a></li>
-        <li><a href="#">Hungary</a></li>
-        <li><a href="#">Iceland</a></li>
-        <li><a href="#">India</a></li>
-        <li><a href="#">Indonesia</a></li>
-        <li><a href="#">Ireland</a></li>
-        <li><a href="#">Israel</a></li>
-        <li><a href="#">Italy</a></li>
-        <li><a href="#">Ivory Coast</a></li>
-        <li><a href="#">Jamaica</a></li>
-        <li><a href="#">Japan</a></li>
-        <li><a href="#">Kazakhstan</a></li>
-        <li><a href="#">Kenya</a></li>
-        <li><a href="#">Kuwait</a></li>
-        <li><a href="#">Laos</a></li>
-        <li><a href="#">Lebanon</a></li>
-        <li><a href="#">Malawi</a></li>
-        <li><a href="#">Malaysia</a></li>
-        <li><a href="#">Mali</a></li>
-        <li><a href="#">Malta</a></li>
-        <li><a href="#">Martinique</a></li>
-        <li><a href="#">Mauritius</a></li>
-        <li><a href="#">Mexico</a></li>
-        <li><a href="#">Morocco</a></li>
-        <li><a href="#">Mozambique</a></li>
-        <li><a href="#">Myanmar</a></li>
-        <li><a href="#">Nepal</a></li>
-        <li><a href="#">Netherlands</a></li>
-        <li><a href="#">New Zealand</a></li>
-        <li><a href="#">Nicaragua</a></li>
-        <li><a href="#">Nigeria</a></li>
-        <li><a href="#">Norway</a></li>
-        <li><a href="#">Oman</a></li>
-        <li><a href="#">Pakistan</a></li>
-        <li><a href="#">Panama</a></li>
-        <li><a href="#">Paraguay</a></li>
-        <li><a href="#">Peru</a></li>
-        <li><a href="#">Philippines</a></li>
-        <li><a href="#">Poland</a></li>
-        <li><a href="#">Portugal</a></li>
-        <li><a href="#">Puerto Rico</a></li>
-        <li><a href="#">Qatar</a></li>
-        <li><a href="#">Romania</a></li>
-        <li><a href="#">Saint Barthelemy</a></li>
-        <li><a href="#">Saint Martin</a></li>
-        <li><a href="#">Saudi Arabia</a></li>
-        <li><a href="#">Senegal</a></li>
-        <li><a href="#">Serbia</a></li>
-        <li><a href="#">Sierra Leone</a></li>
-        <li><a href="#">Singapore</a></li>
-        <li><a href="#">Slovenia</a></li>
-        <li><a href="#">South Africa</a></li>
-        <li><a href="#">Spain</a></li>
-        <li><a href="#">Suriname</a></li>
-        <li><a href="#">Sweden</a></li>
-        <li><a href="#">Switzerland</a></li>
-        <li><a href="#">Taiwan</a></li>
-        <li><a href="#">Tanzania</a></li>
-        <li><a href="#">Thailand</a></li>
-        <li><a href="#">Togo</a></li>
-        <li><a href="#">Trinidad and Tobago</a></li>
-        <li><a href="#">Tunisia</a></li>
-        <li><a href="#">Turkey</a></li>
-        <li><a href="#">UAE (Dubai)</a></li>
-        <li><a href="#">Uganda</a></li>
-        <li><a href="#">Ukraine</a></li>
-        <li><a href="#">United Kingdom</a></li>
-        <li><a href="#">United States</a></li>
-        <li><a href="#">Uruguay</a></li>
-        <li><a href="#">Venezuela</a></li>
-        <li><a href="#">Zambia</a></li>
-        <li><a href="#">Digital Moon (C)</a></li>
-        <li><a href="#">Digital Nation (K)</a></li>
-        <li><a href="#">Digital Star (V)</a></li>
-        <li><a href="#">Druk</a></li>
-        <li><a href="#">Ecommerce 1</a></li>
-        <li><a href="#">Online Sales</a></li>
-      </ul>
+    <div class="countries">
+      Algeria Andorra Argentina Aruba Australia Austria Bahrain Bangladesh Belgium Belize Benin Bolivia Botswana Brazil Brunei Bulgaria Burundi Cambodia Cameroon Canada Chile Colombia Costa Rica Croatia Curacao Czech Republic Denmark Dominican Republic Ecuador Egypt El Salvador Equatorial Guinea Finland France French Guiana French Polynesia Gabon Germany Ghana Greece Guadeloupe Guatemala Guyana Haiti Honduras Hong Kong Hungary Iceland India Indonesia Ireland Israel Italy Ivory Coast Jamaica Japan Kazakhstan Kenya Kuwait Laos Lebanon Malawi Malaysia Mali Malta Martinique Mauritius Mexico Morocco Mozambique Myanmar Nepal Netherlands New Zealand Nicaragua <strong>Nigeria</strong> Norway Oman Pakistan Panama Paraguay Peru Philippines Poland Portugal Puerto Rico Qatar Romania Saint Barthelemy Saint Martin Saudi Arabia Senegal Serbia Sierra Leone Singapore Slovenia South Africa Spain Suriname Sweden Switzerland Taiwan Tanzania Thailand Togo Trinidad and Tobago Tunisia Turkey UAE (Dubai) Uganda Ukraine United Kingdom United States Uruguay Venezuela Zambia
     </div>
 
-    <div class="small-header">
-      ###### ByDzyne®<br>
-      Income Disclosure Statement
-    </div>
+    <div class="small-header">ByDzyne®<br>Income Disclosure Statement</div>
 
-    <p>The Financial Rewards Program is an exciting opportunity designed to reward you for your hard work. As we are all unique and different, everyone’s results will vary. Any and all claims or representations, as to income earnings from ByDzyne or within the program are not to be considered average earnings, neither can they be used as an indication of your future success or results. Past performance is not a guarantee of future results. Income disclosures are neither a guarantee of performance nor an indication of anticipated return. Income results are based on many factors, within and outside of your control, including economic factors, business and sales skills, quality of time, dedication, work ethic, and leadership. Some will perform well above average earning a substantial income, while others will perform below average, and some may not earn any income at all. ByDzyne does not guarantee or imply any specific income earnings, results, or success. If you rely upon our examples and information; you must accept the risk of not doing as well as the examples provided.</p>
-
-    <div class="disclaimer">
-      <em>*The Income Disclosure Chart represents the high, low, and average earnings per Pay Cycle from January 1, 2022 to December 31, 2024 earned by Active ByDzyne Brand Ambassadors* at each Paid As Rank.*</em>
+    <div class="content-card">
+      <p>The Financial Rewards Program is an exciting opportunity designed to reward you for your hard work. As we are all unique and different, everyone’s results will vary. Any and all claims or representations, as to income earnings from ByDzyne or within the program are not to be considered average earnings, neither can they be used as an indication of your future success or results. Past performance is not a guarantee of future results. Income disclosures are neither a guarantee of performance nor an indication of anticipated return. Income results are based on many factors, within and outside of your control, including economic factors, business and sales skills, quality of time, dedication, work ethic, and leadership. Some will perform well above average earning a substantial income, while others will perform below average, and some may not earn any income at all. ByDzyne does not guarantee or imply any specific income earnings, results, or success. If you rely upon our examples and information; you must accept the risk of not doing as well as the examples provided.</p>
     </div>
 
     <div class="disclaimer">
-      <em>*The income statistics shown include commissions and bonuses earned by ByDzyne’s BAs pursuant to the ByDzyne Financial Rewards Program. The Business Volume (BV) generated within a Pay Cycle is used to calculate your commissions, bonuses and rank. The higher the rank, the more bonuses and commissions you may earn.*</em>
+      *The Income Disclosure Chart represents the high, low, and average earnings per Pay Cycle from January 1, 2022 to December 31, 2024 earned by Active ByDzyne Brand Ambassadors* at each Paid As Rank.*
     </div>
 
     <div class="disclaimer">
-      <em>*The figures on this chart should not be considered guarantees of your actual earnings or profits solely by participating in the ByDzyne Financial Rewards Program.*</em>
+      *The income statistics shown include commissions and bonuses earned by ByDzyne’s BAs pursuant to the ByDzyne Financial Rewards Program. The Business Volume (BV) generated within a Pay Cycle is used to calculate your commissions, bonuses and rank. The higher the rank, the more bonuses and commissions you may earn.*
+    </div>
+
+    <div class="disclaimer">
+      *The figures on this chart should not be considered guarantees of your actual earnings or profits solely by participating in the ByDzyne Financial Rewards Program.*
     </div>
 
     <div class="stats">
@@ -257,9 +222,9 @@
       <strong>Global:</strong> An active BA is a BA who buys a minimum of 60 BV worth of products every month. (For Distributor or Director Zone, 60 BV is the minimum to maintain the paid as ranks and applicable commissions. For Diamond, President or Crown Zone, 120 BV is the minimum to maintain the paid as ranks and applicable commissions.)
     </div>
 
-    <hr class="divider">
+    <hr>
 
   </div>
 
 </body>
-  </html>
+</html>
